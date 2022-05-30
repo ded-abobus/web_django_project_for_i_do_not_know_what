@@ -22,7 +22,7 @@
 	  
 	  
 	  
-	  
+	 <!--
 	  
 	<h1>Каталог магазина мебели</h1>
 	<p>Количественные данные:</p>
@@ -31,27 +31,11 @@
 		<li><strong>Количество категорий:</strong>{{ num_categorys }}</li>
 	</ul>
 	  
-	  
-	  
-	  
-	  
-	<table>
-		{% for product in products %}
-			{% cycle '<tr>' '' '' '' %}
-				<td>{{product.content}}</td>
-			{% cycle '' '' '' '</tr>' %}
-		{% endfor %}
-	</table>
+	 -->
 
-	  
+	
+    
 
-	  
-   
-    
-   
-    
-    
-    
     
     <section class="u-align-left u-clearfix u-image u-section-1" id="carousel_c923" data-image-width="1280" data-image-height="720">
       <div class="u-clearfix u-sheet u-sheet-1">
@@ -64,96 +48,23 @@
       <div class="u-clearfix u-sheet u-sheet-1">
         <div class="u-expanded-width u-list u-list-1">
           <div class="u-repeater u-repeater-1">
-            <div class="u-container-style u-custom-color-6 u-custom-item u-list-item u-repeater-item u-list-item-1">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-1">
-                <h2 class="u-text u-text-1">01</h2>
-                <h4 class="u-text u-text-2">Кухни</h4>
-                <p class="u-text u-text-3">Различные кухонные гарнитуры Итальянского и Модерн стилей от фабрик Recordcucine, Mobiltury...</p><span class="u-icon u-icon-circle u-icon-1" data-href="https://nicepage.com/" data-target="_blank"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-3ad4"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-3ad4" style="enable-background:new 0 0 512 512;"><g><g><path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M335.083,271.083    L228.416,377.749c-4.16,4.16-9.621,6.251-15.083,6.251c-5.461,0-10.923-2.091-15.083-6.251c-8.341-8.341-8.341-21.824,0-30.165    L289.835,256l-91.584-91.584c-8.341-8.341-8.341-21.824,0-30.165s21.824-8.341,30.165,0l106.667,106.667    C343.424,249.259,343.424,262.741,335.083,271.083z"></path>
-</g>
-</g></svg></span>
-              </div>
-            </div>
+            {% for category in categorys %}
             <div class="u-container-style u-custom-color-3 u-custom-item u-list-item u-repeater-item u-list-item-2">
               <div class="u-container-layout u-similar-container u-valign-top u-container-layout-2">
-                <h2 class="u-text u-text-4">02</h2>
-                <h4 class="u-text u-text-5">Спальни</h4>
-                <p class="u-text u-text-6">&lt;описание 2&gt;<br>текст текст текст текст&nbsp;текст текст текст текст&nbsp;текст текст текст текст&nbsp;текст текст текст&nbsp;
-                </p><span class="u-icon u-icon-circle u-icon-2" data-href="https://nicepage.com/" data-target="_blank"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-f8de"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-f8de" style="enable-background:new 0 0 512 512;"><g><g><path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M335.083,271.083    L228.416,377.749c-4.16,4.16-9.621,6.251-15.083,6.251c-5.461,0-10.923-2.091-15.083-6.251c-8.341-8.341-8.341-21.824,0-30.165    L289.835,256l-91.584-91.584c-8.341-8.341-8.341-21.824,0-30.165s21.824-8.341,30.165,0l106.667,106.667    C343.424,249.259,343.424,262.741,335.083,271.083z"></path>
-</g>
-</g></svg></span>
+                <h2 class="u-text u-text-4">0{{category.id_category}}</h2>
+                <h4 class="u-text u-text-5">{{category.name_category}}</h4>
+                <p class="u-text u-text-6">{{category.category_description}}</p>
+                <span class="u-icon u-icon-circle u-icon-2" data-href="https://nicepage.com/" data-target="_blank"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-f8de"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-f8de" style="enable-background:new 0 0 512 512;"><g><g><path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M335.083,271.083    L228.416,377.749c-4.16,4.16-9.621,6.251-15.083,6.251c-5.461,0-10.923-2.091-15.083-6.251c-8.341-8.341-8.341-21.824,0-30.165    L289.835,256l-91.584-91.584c-8.341-8.341-8.341-21.824,0-30.165s21.824-8.341,30.165,0l106.667,106.667    C343.424,249.259,343.424,262.741,335.083,271.083z"></path>
+                </g>
+                </g></svg></span>
               </div>
             </div>
-            <div class="u-container-style u-custom-item u-list-item u-palette-5-dark-3 u-repeater-item u-list-item-3">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-3">
-                <h2 class="u-text u-text-7">03</h2>
-                <h4 class="u-text u-text-8">Гостинные</h4>
-                <p class="u-text u-text-9">&lt;описание 3&gt;<br>текст текст текст текст&nbsp;текст текст текст текст&nbsp;текст текст текст текст&nbsp;текст текст текст
-                </p><span class="u-icon u-icon-circle u-icon-3" data-href="https://nicepage.com/" data-target="_blank"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7bae"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-7bae" style="enable-background:new 0 0 512 512;"><g><g><path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M335.083,271.083    L228.416,377.749c-4.16,4.16-9.621,6.251-15.083,6.251c-5.461,0-10.923-2.091-15.083-6.251c-8.341-8.341-8.341-21.824,0-30.165    L289.835,256l-91.584-91.584c-8.341-8.341-8.341-21.824,0-30.165s21.824-8.341,30.165,0l106.667,106.667    C343.424,249.259,343.424,262.741,335.083,271.083z"></path>
-</g>
-</g></svg></span>
-              </div>
-            </div>
-            <div class="u-container-style u-custom-item u-list-item u-palette-5-dark-2 u-repeater-item u-list-item-4">
-              <div class="u-container-layout u-similar-container u-valign-top u-container-layout-4">
-                <h2 class="u-text u-text-10">04</h2>
-                <h4 class="u-text u-text-11">Детские</h4>
-                <p class="u-text u-text-12">&lt;описание 4&gt;<br>текст текст текст текст&nbsp;текст текст текст текст&nbsp;текст текст текст текст&nbsp;текст текст текст
-                </p><span class="u-icon u-icon-circle u-icon-4" data-href="https://nicepage.com/" data-target="_blank"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1984"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-1984" style="enable-background:new 0 0 512 512;"><g><g><path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M335.083,271.083    L228.416,377.749c-4.16,4.16-9.621,6.251-15.083,6.251c-5.461,0-10.923-2.091-15.083-6.251c-8.341-8.341-8.341-21.824,0-30.165    L289.835,256l-91.584-91.584c-8.341-8.341-8.341-21.824,0-30.165s21.824-8.341,30.165,0l106.667,106.667    C343.424,249.259,343.424,262.741,335.083,271.083z"></path>
-</g>
-</g></svg></span>
-              </div>
-            </div>
+            {% endfor %}
           </div>
         </div>
       </div>
     </section>
-    <section class="u-clearfix u-custom-color-7 u-section-3" id="sec-7b22">
-      <div class="u-clearfix u-sheet u-sheet-1">
-        <div class="u-expanded-width u-list u-list-1">
-          <div class="u-repeater u-repeater-1">
-            <div class="u-container-style u-custom-color-6 u-custom-item u-list-item u-repeater-item u-list-item-1">
-              <div class="u-container-layout u-similar-container u-container-layout-1">
-                <h2 class="u-text u-text-1">05</h2>
-                <h4 class="u-text u-text-2">Кабинеты</h4>
-                <p class="u-text u-text-3">&lt;описание 5&gt;<br>текст текст текст текст&nbsp;текст текст текст текст&nbsp;текст текст текст текст&nbsp;текст текст текст
-                </p><span class="u-icon u-icon-circle u-icon-1" data-href="https://nicepage.com/" data-target="_blank"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-3ad4"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-3ad4" style="enable-background:new 0 0 512 512;"><g><g><path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M335.083,271.083    L228.416,377.749c-4.16,4.16-9.621,6.251-15.083,6.251c-5.461,0-10.923-2.091-15.083-6.251c-8.341-8.341-8.341-21.824,0-30.165    L289.835,256l-91.584-91.584c-8.341-8.341-8.341-21.824,0-30.165s21.824-8.341,30.165,0l106.667,106.667    C343.424,249.259,343.424,262.741,335.083,271.083z"></path>
-</g>
-</g></svg></span>
-              </div>
-            </div>
-            <div class="u-container-style u-custom-color-3 u-custom-item u-list-item u-repeater-item u-list-item-2">
-              <div class="u-container-layout u-similar-container u-container-layout-2">
-                <h2 class="u-text u-text-4">06</h2>
-                <h4 class="u-text u-text-5">Столы и стулья</h4>
-                <p class="u-text u-text-6">&lt;описание 6&gt;<br>текст текст текст текст&nbsp;текст текст текст текст&nbsp;текст текст текст текст&nbsp;текст текст текст
-                </p><span class="u-icon u-icon-circle u-icon-2" data-href="https://nicepage.com/" data-target="_blank"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-f8de"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-f8de" style="enable-background:new 0 0 512 512;"><g><g><path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M335.083,271.083    L228.416,377.749c-4.16,4.16-9.621,6.251-15.083,6.251c-5.461,0-10.923-2.091-15.083-6.251c-8.341-8.341-8.341-21.824,0-30.165    L289.835,256l-91.584-91.584c-8.341-8.341-8.341-21.824,0-30.165s21.824-8.341,30.165,0l106.667,106.667    C343.424,249.259,343.424,262.741,335.083,271.083z"></path>
-</g>
-</g></svg></span>
-              </div>
-            </div>
-            <div class="u-container-style u-custom-item u-list-item u-palette-5-dark-3 u-repeater-item u-list-item-3">
-              <div class="u-container-layout u-similar-container u-container-layout-3">
-                <h2 class="u-text u-text-7">07</h2>
-                <h4 class="u-text u-text-8">Мягкая мебель</h4>
-                <p class="u-text u-text-9">&lt;описание 7&gt;<br>текст текст текст текст&nbsp;текст текст текст текст&nbsp;текст текст текст текст&nbsp;текст текст текст
-                </p><span class="u-icon u-icon-circle u-icon-3" data-href="https://nicepage.com/" data-target="_blank"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-7bae"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-7bae" style="enable-background:new 0 0 512 512;"><g><g><path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M335.083,271.083    L228.416,377.749c-4.16,4.16-9.621,6.251-15.083,6.251c-5.461,0-10.923-2.091-15.083-6.251c-8.341-8.341-8.341-21.824,0-30.165    L289.835,256l-91.584-91.584c-8.341-8.341-8.341-21.824,0-30.165s21.824-8.341,30.165,0l106.667,106.667    C343.424,249.259,343.424,262.741,335.083,271.083z"></path>
-</g>
-</g></svg></span>
-              </div>
-            </div>
-            <div class="u-container-style u-custom-item u-list-item u-palette-5-dark-2 u-repeater-item u-list-item-4">
-              <div class="u-container-layout u-similar-container u-container-layout-4">
-                <h2 class="u-text u-text-10">08</h2>
-                <h4 class="u-text u-text-11">Прихожие</h4>
-                <p class="u-text u-text-12">&lt;описание 8&gt;<br>текст текст текст текст&nbsp;текст текст текст текст&nbsp;текст текст текст текст&nbsp;текст текст текст
-                </p><span class="u-icon u-icon-circle u-icon-4" data-href="https://nicepage.com/" data-target="_blank"><svg class="u-svg-link" preserveAspectRatio="xMidYMin slice" viewBox="0 0 512 512" style=""><use xmlns:xlink="http://www.w3.org/1999/xlink" xlink:href="#svg-1984"></use></svg><svg class="u-svg-content" viewBox="0 0 512 512" x="0px" y="0px" id="svg-1984" style="enable-background:new 0 0 512 512;"><g><g><path d="M256,0C114.837,0,0,114.837,0,256s114.837,256,256,256s256-114.837,256-256S397.163,0,256,0z M335.083,271.083    L228.416,377.749c-4.16,4.16-9.621,6.251-15.083,6.251c-5.461,0-10.923-2.091-15.083-6.251c-8.341-8.341-8.341-21.824,0-30.165    L289.835,256l-91.584-91.584c-8.341-8.341-8.341-21.824,0-30.165s21.824-8.341,30.165,0l106.667,106.667    C343.424,249.259,343.424,262.741,335.083,271.083z"></path>
-</g>
-</g></svg></span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
+
     </section>
     <section class="u-align-center u-clearfix u-grey-5 u-section-4" id="sec-b8e0">
       <div class="u-clearfix u-sheet u-sheet-1">
