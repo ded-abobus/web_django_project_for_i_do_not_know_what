@@ -11,8 +11,7 @@ def index(request):
 	num_products = ProductModel.objects.all().count()
 	num_categorys = CategoryModel.objects.all().count()
 	products = ProductModel.objects.all()
-
-	#print(products.content)
+	categorys = CategoryModel.objects.all()
 
 	return render(
 		request,
@@ -21,6 +20,8 @@ def index(request):
 			'num_products': num_products,
 			'num_categorys': num_categorys,
 			'products': products,
+			'categorys': categorys,
+			# 'names': names,
 		})
 
 class ProductCreateView(CreateView):
